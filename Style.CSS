@@ -1,0 +1,180 @@
+:root {
+  --dark-bg: #181818;
+  --card-bg: #232323;
+  --accent: #ff6b35;
+  --white: #fff;
+  --grey: #cccccc;
+  --montserrat: 'Montserrat', sans-serif;
+  --opensans: 'Open Sans', sans-serif;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--white);
+  font-family: var(--opensans);
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  background: var(--card-bg);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: var(--montserrat);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--grey);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 90px 10px 60px 10px;
+  background: linear-gradient(135deg, #222 60%, #333 100%);
+}
+
+.hero h1 {
+  font-family: var(--montserrat);
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.highlight {
+  color: var(--accent);
+}
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+.tagline {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/* Services */
+.services {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 10px 40px 10px;
+}
+.services h2 {
+  font-family: var(--montserrat);
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  text-align: center;
+  letter-spacing: 1px;
+}
+.service-list {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+}
+.service-list div {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+.service-list div:hover {
+  box-shadow: 0 4px 25px rgba(255,107,53,0.12);
+}
+.service-list h3 {
+  font-family: var(--montserrat);
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+/* Portfolio / Trusted By */
+.portfolio {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 10px 40px 10px;
+  text-align: center;
+}
+.portfolio h2 {
+  color: var(--accent);
+  font-family: var(--montserrat);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: var(--grey);
+}
+
+/* Contact */
+.contact {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  padding: 50px 10px;
+  background: var(--card-bg);
+  border-radius: 8px;
+}
+.contact h2 {
+  font-family: var(--montserrat);
+  color: var(--accent);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 0 1rem;
+  }
+  .service-list { grid-template-columns: 1fr; }
+}
